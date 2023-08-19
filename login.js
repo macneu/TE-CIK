@@ -17,7 +17,7 @@ loginForm.addEventListener("submit", (e) => {
 
 
     if (temp == login) {
-        window.location.href = "file:///D:/Pulpit/Nowy%20folder%20(2)/DASH/index.html";
+        window.location.href = "https://macneu.github.io/TE-CIK/index";
       } else {
         console.log('CHUj')
       }
