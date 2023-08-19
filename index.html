@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pl" >
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<div id="preloader"></div>
+
+<nav class="navbar navbar-expand-custom navbar-mainbg sticky-top">
+    <a class="navbar-brand navbar-logo brand_logo">MINISTARNCI MB FATIMSKIEJ</a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li class="nav-item active">
+                    <a class="nav-link tablinks" onclick="openTab(event, 'dash')" href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tablinks" onclick="openTab(event, 'ministarnci')" href="javascript:void(0);"><i class="far fa-address-book"></i>Ministranci</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tablinks" onclick="openTab(event, 'comp')" href="javascript:void(0);"><i class="far fa-clone"></i>Components</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tablinks" onclick="openTab(event, 'cal')" href="javascript:void(0);"><i class="far fa-calendar-alt"></i>Kalendarz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tablinks" onclick="openTab(event, 'char')" href="javascript:void(0);"><i class="far fa-chart-bar"></i>Charts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tablinks" onclick="openTab(event, 'doc')" href="javascript:void(0);"><i class="far fa-copy"></i>Documents</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tablinks" onclick="openTab(event, 'doc')" href="javascript:void(0);"><i class="far fa-copy"></i>Documents</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="dash" class="tabcontent">
+      <button class="acc bg-transparent border-0" data-toggle="modal" data-target="#Acc"><img src="acc-removebg-preview.png" class="img-fluid acc_img" style="filter: drop-shadow(#3500D3 10px 10px 30px) "></button>
+      aaaaaaa
+    </div>
+    
+    <div id="ministarnci" class="tabcontent">
+        <button class="acc bg-transparent border-0" data-toggle="modal" data-target="#Acc"><img src="acc-removebg-preview.png" class="img-fluid acc_img" style="filter: drop-shadow(#3500D3 10px 10px 30px) "></button>
+
+        <button class="add d-none d-lg-block btn btn-lg btn-dark rounded-pill" data-toggle="modal" data-target="#AddMin"><i class="fas fa-plus fa-sm"></i>DODAJ MINISTRANTA</button>
+        <div class="row">
+            <div class="d-none d-lg-block col-4 ">
+              <a href="#demo" data-toggle="collapse">Collapsible</a>
+                <div id="demo" class="collapse">
+                Lorem ipsum dolor text....
+                </div>
+
+            </div>
+
+            <div class="col-12 col-lg-8 tab">
+                <div></div>
+                <div class="wid-res m-auto table-responsive">
+                    <span>
+                        <input class="search form-control-sm w-50 bg-transparent mr-sm-2 mb-3" type="text" id="myInput" onkeyup="myFunction()" placeholder="Wyszukaj ministranta" title="Type in a name">
+                    </span>
+                    <table id="table" class="table table-dark table-hover">
+                        <thead>
+                            <tr>
+                              <th>Imie i nazwisko</th>
+                              <th>Ranga</th>
+                              <th>nr tel.</th>
+                              <th> </th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tab_con">
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="AddMin">
+            <div class="modal-dialog modal-dialog-centered modal-lg ">
+              <div class="modal-content mod">
+              
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">DODAJ MINISTRANTA</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form name="submit-to-google-sheet">
+                        <div class="form-group">
+                           <input name="Imie i nazwisko" type="text" class="inp" placeholder="IMIE I NAZWISKO">
+                        </div>
+                        <div class="form-group">
+                            <select class="custom-select bg-dark mr-sm-2 inp" name="ranga">
+                                <option value="Kandydat">Kandydat</option>
+                                <option value="Ministrant">Ministrant</option>
+                                <option value="Lektor">Lektor</option>
+                                <option value="Animator">Animator</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input class="inp" type="tel" name="nr tel" placeholder="123 456 789" pattern="[0-9]{3} [0-9]{3} [0-9]{3}">
+                            <label class="form-label" for="phone">Phone number with country code</label>
+                        </div>
+                          <input name=" " type="checkbox" required value="x">
+                        <button type="submit" class="btn btn-primary" >Submit</button>
+                      </form>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div id="comp" class="tabcontent">
+      <button class="acc bg-transparent border-0" data-toggle="modal" data-target="#Acc"><img src="acc-removebg-preview.png" class="img-fluid acc_img" style="filter: drop-shadow(#3500D3 10px 10px 30px) "></button>
+    </div>
+
+    <div id="cal" class="tabcontent">
+      <button class="acc bg-transparent border-0" data-toggle="modal" data-target="#Acc"><img src="acc-removebg-preview.png" class="img-fluid acc_img" style="filter: drop-shadow(#3500D3 10px 10px 30px) "></button>
+
+      <div class="row">
+        <div class="col-3 d-none d-lg-block">
+          <div class="calendar position-relative">
+            <div class="blocker_v2"></div>
+            <iframe src="https://embed.styledcalendar.com/#YYnzTpygurXOu1DjHdk6" title="Styled Calendar" class="styled-calendar-container" style="width: 100%; border: none;" data-cy="calendar-embed-iframe"></iframe>
+            <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-9">
+          <div class="calendar position-relative">
+            <div class="blocker"></div>
+            <iframe src="https://embed.styledcalendar.com/#YYnzTpygurXOu1DjHdk6" title="Styled Calendar" class="styled-calendar-container" style="width: 100%; border: none;" data-cy="calendar-embed-iframe"></iframe>
+            <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div id="char" class="tabcontent">eeeeee</div>
+    <div id="doc" class="tabcontent">fffffff</div>
+    
+    <div class="modal fade" id="Acc">
+      <div class="modal-dialog modal-md rounded-lg ac">
+        <div class="modal-content mod-ac">
+        
+          <div class="modal-header">
+            <div class="banner rounded-lg"></div>
+            <img class="pr_photo" src="acc-removebg-preview.png">
+            <div class="username">MACIEJ NEUGEBAUER</div>
+            
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <div class="modal-body">
+            <div class="btn-group-vertical w-100">
+            <button type="button" class="btn btn-dark mt-5" data-dismiss="modal">GOOGLE DRIVE</button>
+            <button type="button" class="btn btn-dark mt-2" data-dismiss="modal">MESSENGER</button>
+            </div>
+
+            <div class="btn-group-vertical w-100">
+            <button type="button" class="btn btn-dark mt-5" data-dismiss="modal">ZMIEŃ KONTO</button>
+            <button type="button" class="btn btn-dark mt-2" data-dismiss="modal">ZMIEŃ HASŁO</button>
+            <button type="button" class="btn btn-danger mt-2 mb-2" data-dismiss="modal">WYLOGUJ</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+  </div>
+
+<!-- partial -->
+
+  <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+</body>
+</html>
